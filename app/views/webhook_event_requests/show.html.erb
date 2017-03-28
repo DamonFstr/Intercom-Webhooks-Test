@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Payload:</strong>
+  <%= @webhook_event_request.payload %>
+</p>
+
+<%= link_to 'Edit', edit_webhook_event_request_path(@webhook_event_request) %> |
+<%= link_to 'Back', webhook_event_requests_path %>

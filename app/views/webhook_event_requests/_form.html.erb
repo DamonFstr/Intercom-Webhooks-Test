@@ -1,0 +1,21 @@
+<%= form_for(@webhook_event_request) do |f| %>
+  <% if @webhook_event_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@webhook_event_request.errors.count, "error") %> prohibited this webhook_event_request from being saved:</h2>
+
+      <ul>
+      <% @webhook_event_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :payload %><br>
+    <%= f.text_area :payload %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
